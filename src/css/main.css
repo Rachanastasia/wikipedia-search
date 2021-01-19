@@ -159,6 +159,7 @@ input, textarea{
 
 input:focus, textarea:focus{
   outline: var(--border-width) solid var(--colors-accent);
+  border: var(--border-width) solid var(--colors-accent);
 }
 
 .search-wrapper{
@@ -168,6 +169,13 @@ input:focus, textarea:focus{
 .search-wrapper button{
   margin-left: var(--spacer-sm);
 }
+
+.no-search-term,
+.no-results-text{
+  font-size: var(--font-size-med);
+  color: var(--colors-accent);
+}
+
 /*END FORM STYLES*/
 
 

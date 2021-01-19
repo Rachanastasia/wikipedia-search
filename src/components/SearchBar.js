@@ -1,21 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { searchWikipediaApi } from '../services/wikipedia-api-service';
 
 
-function Search(props) {
-  const [searchTerm, setSearchTerm] = useState('');
+function SearchBar(props) {
 
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const t = await searchWikipediaApi(searchTerm);
+      const t = await searchWikipediaApi(props.searchTerm);
       console.log('FROM HANDLE SUBMIT', t)
       props.setResults(t[1])
     }
     catch (error) {
       console.error(error);
     }
-
   }
 
   return (
@@ -24,7 +22,7 @@ function Search(props) {
         <fieldset>
           <label htmlFor='search'>Search</label>
           <input type='text' name='search' id='search'
-            value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
+            value={props.searchTerm} onChange={e => props.setSearchTerm(e.target.value)} />
         </fieldset>
         <button type='submit'>Search</button>
       </form>
@@ -32,4 +30,4 @@ function Search(props) {
   )
 }
 
-export default Search;
+export default SearchBar;
