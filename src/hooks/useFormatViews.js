@@ -1,11 +1,17 @@
 export function useFormatViews(views) {
   let total = 0;
-  let week = [];
+  let dataArr = [];
+  //views in month
+  //views in week
+  //up or down from before
+  //views today
+
+
   for (const [key, value] of Object.entries(views)) {
     total += value;
-    week.push(key)
+    dataArr.push(key)
 
 
   }
-  return { total, week }
+  return { total, dataArr }
 }

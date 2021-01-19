@@ -4,8 +4,8 @@ export function searchWikipediaApi(term) {
       return (!res.ok)
         ? res.json().then(e => Promise.reject(e))
         : res.json()
-    })
-}
+    });
+};
 
 export function getWikipediaArticleDetails(title) {
   return fetch(`${process.env.REACT_APP_API_ENDPOINT}?action=query&format=json&titles=${title}&prop=description|pageviews&origin=*`)
@@ -13,5 +13,5 @@ export function getWikipediaArticleDetails(title) {
       return (!res.ok)
         ? res.json().then(e => Promise.reject(e))
         : res.json()
-    })
-}
+    });
+};
