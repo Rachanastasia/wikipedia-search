@@ -21,7 +21,6 @@ h2, h3{
 }
 
 p{
-  padding: var(--spacer-sm) 0;
   font-size: var(--font-size-sm);
 }
 
@@ -62,6 +61,7 @@ section{
   width: inherit;
   padding: var(--spacer-sm) var(--spacer-lg);
   justify-content: flex-start;
+  align-items: center;
   height: 100%;
   color: var(--colors-black);
 }
@@ -82,6 +82,13 @@ img{
 
 ul{
   list-style: none;
+  width: inherit;
+}
+
+li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*HEADER STYLES */
@@ -175,6 +182,22 @@ input:focus, textarea:focus{
   font-size: var(--font-size-med);
   color: var(--colors-accent);
 }
+
+.search-result-wrapper{
+  padding: var(--spacer-sm);
+  background-color: var(--colors-accent-light);
+  margin-bottom: var(--spacer-sm);
+  border-radius: var(--button-border-radius);
+}
+
+.search-result-text{
+  font-size: var(--font-size-med);
+}
+
+.search-result-less{
+  transform: rotate(180deg);
+}
+
 
 /*END FORM STYLES*/
 

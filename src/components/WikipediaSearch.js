@@ -5,7 +5,7 @@ import Results from './Results';
 function WikipediaSearch() {
   const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState([]);
-
+  console.log('RESULTS FROM WIKISEARCH', results)
   return (
     <Fragment>
       <SearchBar

@@ -7,9 +7,9 @@ function SearchBar(props) {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const t = await searchWikipediaApi(props.searchTerm);
-      console.log('FROM HANDLE SUBMIT', t)
-      props.setResults(t[1])
+      const res = await searchWikipediaApi(props.searchTerm);
+      console.log('FROM HANDLE SUBMIT', res)
+      props.setResults(res[1])
     }
     catch (error) {
       console.error(error);
