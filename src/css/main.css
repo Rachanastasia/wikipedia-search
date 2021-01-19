@@ -87,8 +87,13 @@ ul{
 
 li{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  border: 2px solid var(--colors-accent-light);
+}
+
+li:focus{
+  border: 2px solid var(--colors-accent);
+  outline: 0;
 }
 
 /*HEADER STYLES */
@@ -102,6 +107,7 @@ header{
   color: var(--colors-white);
   padding: var(--spacer-sm);
   height: var(--button-width);
+  letter-spacing: 0.1rem;
 }
 
 h1{
@@ -120,6 +126,10 @@ header button:hover, header .button:hover{
   background-color: var(--colors-white);
   color: var(--colors-accent);
   border: var(--border-width) solid var(--colors-accent);
+}
+
+header span{
+  margin-top: var(--spacer-sm);
 }
 /* END HEADER STYLES */
 
@@ -198,6 +208,17 @@ input:focus, textarea:focus{
   transform: rotate(180deg);
 }
 
+.result-top-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.result-details-wrapper p {
+  margin-top: var(--spacer-sm);
+}
 
 /*END FORM STYLES*/
 
@@ -255,6 +276,10 @@ footer p{
       padding-left: 0;
       padding-bottom: var(--spacer-sm);
       padding-top: var(--spacer-sm);
+  }
+
+  header span{
+    margin-top: 0;
   }
 }
 

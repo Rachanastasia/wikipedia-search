@@ -8,7 +8,6 @@ function SearchBar(props) {
     e.preventDefault();
     try {
       const res = await searchWikipediaApi(props.searchTerm);
-      console.log('FROM HANDLE SUBMIT', res)
       props.setResults(res[1])
     }
     catch (error) {

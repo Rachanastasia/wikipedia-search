@@ -3,7 +3,8 @@ import React from 'react'
 function Header() {
   return (
     <header>
-      <h1>Wikipedia Links</h1> <span>Some subtitle should go here</span>
+      <h1>WikiViews</h1>
+      <span>Search for page views of Wikipedia articles</span>
     </header>
   )
 }
