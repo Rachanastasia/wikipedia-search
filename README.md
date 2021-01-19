@@ -1,9 +1,13 @@
-# NAME THIS APP
+# Wikipedia Search
 
 ## Tech
 
 - React.js
 - CSS3
+
+## The Wikipedia API
+
+For this project, I used the Wikipedia API, which searches
 
 ## Assignment
 

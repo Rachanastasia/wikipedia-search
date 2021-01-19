@@ -80,6 +80,10 @@ img{
   width: 100%;
 }
 
+ul{
+  list-style: none;
+}
+
 /*HEADER STYLES */
 header{
   width: inherit;
@@ -134,10 +138,10 @@ fieldset{
   outline: 0;
   border: 0;
 }
-/*limits width of label*/
+/*label is present for accessability but hidden because it is unnecessary.*/
 label{
-  padding-right: var(--spacer-sm);
-  width: var(--button-width);
+  visibility: hidden;
+  width: 0;
 }
 
 input{

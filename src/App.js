@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './css/variables.css';
 import './css/main.css';
 import Header from './components/Header';
@@ -7,11 +7,13 @@ import Results from './components/Results';
 
 
 function App() {
+  const [results, setResults] = useState([]);
+
   return (
     <main className="App">
       <Header />
-      <Search />
-      <Results />
+      <Search setResults={r => setResults(r)} />
+      <Results results={results} />
     </main>
   );
 }

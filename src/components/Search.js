@@ -2,13 +2,20 @@ import React, { useState } from 'react';
 import { searchWikipediaApi } from '../services/wikipedia-api-service';
 
 
-function Search() {
+function Search(props) {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSubmit = async e => {
     e.preventDefault();
-    const t = await searchWikipediaApi(searchTerm);
-    console.log('FROM HANDLE SUBMIT', t)
+    try {
+      const t = await searchWikipediaApi(searchTerm);
+      console.log('FROM HANDLE SUBMIT', t)
+      props.setResults(t[1])
+    }
+    catch (error) {
+      console.error(error);
+    }
+
   }
 
   return (
