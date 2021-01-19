@@ -1,4 +1,8 @@
-# Wikipedia Search
+# [Wikipedia Search](https://wiki-pageviews.vercel.app/)
+
+To use the app, search for a keyword. Click on a result to view how many times a page was viewed in the last 30 days.
+
+View the live project [here](https://wiki-pageviews.vercel.app/).
 
 ## Tech
 
@@ -7,7 +11,7 @@
 
 ## The Wikipedia API
 
-For this project, I used the Wikipedia API, which searches
+This project uses the Wikipedia API. It makes two requiests to
 
 ## Assignment
 

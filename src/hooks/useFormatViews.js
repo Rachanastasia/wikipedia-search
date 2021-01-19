@@ -3,7 +3,9 @@ export function useFormatViews(views) {
   let week = [];
   for (const [key, value] of Object.entries(views)) {
     total += value;
+    week.push(key)
+
+
   }
-  console.log({ total })
   return { total, week }
 }
