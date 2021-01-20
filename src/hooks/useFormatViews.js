@@ -1,17 +1,18 @@
 export function useFormatViews(views) {
-  let total = 0;
-  let dataArr = [];
-  //views in month
-  //views in week
-  //up or down from before
-  //views today
+  let monthlyViews = 0;
+  let weeklyViews = 0;
 
+  const viewArr = Object.values(views);
 
-  for (const [key, value] of Object.entries(views)) {
-    total += value;
-    dataArr.push(key)
+  const dailyViews = viewArr[0];
 
+  for (let i = 0; i < viewArr.length; i++) {
+    monthlyViews += viewArr[i];
 
+    if (i < 7) {
+      weeklyViews += viewArr[i];
+    }
   }
-  return { total, dataArr }
+
+  return { weeklyViews, monthlyViews, dailyViews }
 }

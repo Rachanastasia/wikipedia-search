@@ -215,11 +215,31 @@ input:focus, textarea:focus{
   align-items: center;
 }
 
-
+.result-details-desc{
+  margin-bottom: var(--spacer-sm);
+  font-size: calc(var(--font-size-sm) * 0.8);
+}
 
 .result-details-wrapper p {
+  font-size: calc(var(--font-size-sm) * 0.8);
+}
+
+.result-details-wrapper p:first-of-type{
   margin-top: var(--spacer-sm);
 }
+
+/* @keyframes loading{
+  start{
+    transform: rotate(0deg);
+  }
+  end{
+    transform: rotate(180deg);
+  }
+}
+.search-arrow-loading{
+  animation-name: loading;
+  animation-iteration-count: infinite;
+} */
 
 /*END FORM STYLES*/
 
