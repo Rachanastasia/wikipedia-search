@@ -3,7 +3,7 @@ import SearchBar from './SearchBar';
 import Results from './Results';
 
 function WikipediaSearch() {
-  const [searchTerm, setSearchTerm] = useState('testing');
+  const [searchTerm, setSearchTerm] = useState('JavaScript');
   const [results, setResults] = useState([]);
 
   return (
