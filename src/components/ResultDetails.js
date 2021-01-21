@@ -4,13 +4,11 @@ import Chart from "chart.js";
 
 
 function ResultDetails(props) {
-  const { totalViews, viewsPerDay, dates, max } = useFormatViews(props.views);
+  const { totalViews, viewsPerDay, dates } = useFormatViews(props.views);
   const chartRef = useRef();
-  console.log(max, viewsPerDay)
 
   useEffect(() => {
     const chartRefCtx = chartRef.current.getContext("2d");
-
     new Chart(chartRefCtx, {
       type: 'line',
       data: {
@@ -40,7 +38,7 @@ function ResultDetails(props) {
 
       }
     })
-  })
+  }, [])
 
   return (
     <div className='result-details-wrapper'>

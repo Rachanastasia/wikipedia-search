@@ -3,7 +3,7 @@ import SearchBar from './SearchBar';
 import Results from './Results';
 
 function WikipediaSearch() {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState('testing');
   const [results, setResults] = useState([]);
 
   return (
@@ -14,9 +14,7 @@ function WikipediaSearch() {
         setResults={r => setResults(r)} />
       {results
         ? <Results results={results} />
-        : <section>
-          <p className='no-search-term'></p>
-        </section>}
+        : null}
     </Fragment>
   )
 }

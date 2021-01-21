@@ -17,21 +17,12 @@ main{
   letter-spacing: 0.08rem;
 }
 
-h2, h3{
-  font-size: var(--font-size-med);
-}
-
 p{
   font-size: var(--font-size-sm);
 }
 
 p:last-of-type{
   padding-bottom: 0;
-}
-
-a{
-  text-decoration: none;
-  color: var(--colors-accent);
 }
 
 button, .button{
@@ -167,7 +158,7 @@ input{
   border: var(--border-width) solid grey;
 }
 
-input, textarea{
+input{
   flex: 3;
   width: 100%;
   padding: var(--spacer-tiny) ;
@@ -228,20 +219,9 @@ input:focus, textarea:focus{
   margin-top: var(--spacer-sm);
 }
 
-/* @keyframes loading{
-  start{
-    transform: rotate(0deg);
-  }
-  end{
-    transform: rotate(180deg);
-  }
+.chart{
+ height: 300px;
 }
-.search-arrow-loading{
-  animation-name: loading;
-  animation-iteration-count: infinite;
-} */
-
-/*END FORM STYLES*/
 
 
 @media all and (min-width: 500px){

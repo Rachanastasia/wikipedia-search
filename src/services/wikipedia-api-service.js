@@ -1,3 +1,4 @@
+//gets search results
 export function searchWikipediaApi(term) {
   return fetch(`${process.env.REACT_APP_API_ENDPOINT}?action=opensearch&format=json&search=${term}&limit=20&origin=*`)
     .then(res => {
@@ -7,6 +8,7 @@ export function searchWikipediaApi(term) {
     });
 };
 
+//gets view details and description with article title
 export function getWikipediaArticleDetails(title) {
   return fetch(`${process.env.REACT_APP_API_ENDPOINT}?action=query&format=json&titles=${title}&prop=description|pageviews&origin=*`)
     .then(res => {
