@@ -12,10 +12,10 @@ function WikipediaSearch() {
         searchTerm={searchTerm}
         setSearchTerm={t => setSearchTerm(t)}
         setResults={r => setResults(r)} />
-      {searchTerm
+      {results
         ? <Results results={results} />
         : <section>
-          <p className='no-search-term'>Enter a search term to view results!</p>
+          <p className='no-search-term'></p>
         </section>}
     </Fragment>
   )

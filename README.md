@@ -7,6 +7,7 @@ View the live project [here](https://wiki-pageviews.vercel.app/).
 ## Tech
 
 - React.js
+- Chart.js
 - CSS3
 
 ## The Wikipedia API

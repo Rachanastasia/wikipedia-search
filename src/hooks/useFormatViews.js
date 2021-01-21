@@ -1,18 +1,19 @@
 export function useFormatViews(views) {
-  let monthlyViews = 0;
-  let weeklyViews = 0;
+  let viewsPerDay = [];
+  let dates = [];
+  let totalViews = 0;
+  let max = 0;
 
-  const viewArr = Object.values(views);
-
-  const dailyViews = viewArr[0];
-
-  for (let i = 0; i < viewArr.length; i++) {
-    monthlyViews += viewArr[i];
-
-    if (i < 7) {
-      weeklyViews += viewArr[i];
+  for (const [k, v] of Object.entries(views)) {
+    totalViews = totalViews + v;
+    if (v > max) {
+      max = v;
     }
+    let formattedDate = new Date(k).toLocaleDateString();
+    //regex for being surrounded by spaces
+    dates.push(formattedDate.slice(0, formattedDate.length - 5));
+    viewsPerDay.push(v);
   }
 
-  return { weeklyViews, monthlyViews, dailyViews }
+  return { totalViews, viewsPerDay, dates, max }
 }
