@@ -6,17 +6,21 @@ import Chart from "chart.js";
 function ResultDetails(props) {
   const { totalViews, viewsPerDay, dates, max } = useFormatViews(props.views);
   const chartRef = useRef();
-  let chartRefCtx;
   console.log(max, viewsPerDay)
 
   useEffect(() => {
-    chartRefCtx = chartRef.current.getContext("2d");
+    const chartRefCtx = chartRef.current.getContext("2d");
 
     new Chart(chartRefCtx, {
       type: 'line',
       data: {
         labels: dates,
-        viewsPerDay: viewsPerDay
+        datasets: [{
+          label: "Daily views",
+          backgroundColor: "#01579B",
+          data: viewsPerDay,
+          fill: false
+        }]
       },
       options: {
         responsive: true,
@@ -33,6 +37,7 @@ function ResultDetails(props) {
             labelString: 'value'
           }
         }],
+
       }
     })
   })
@@ -40,8 +45,9 @@ function ResultDetails(props) {
   return (
     <div className='result-details-wrapper'>
       {props.desc ? <p className='result-details-desc'>{props.desc}</p> : null}
-      <canvas className='chart' ref={chartRef} />
-      <p>Total views in the past 60 days: {totalViews ? totalViews : 0}</p>
+      <canvas className='chart' ref={chartRef} >
+        <p>Total views in the past 60 days: {totalViews ? totalViews : 0}</p>
+      </canvas>
     </div>
   )
 }
