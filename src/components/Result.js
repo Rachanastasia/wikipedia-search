@@ -14,7 +14,7 @@ function Result(props) {
     return () => {
       setDesc('');
       setViews([]);
-      setExpanded(false)
+      setExpanded(false);
     }
     //rerender for new search
   }, [props.res])
