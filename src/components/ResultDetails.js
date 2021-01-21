@@ -38,7 +38,7 @@ function ResultDetails(props) {
 
       }
     })
-  }, [])
+  }, [dates, viewsPerDay]);
 
   return (
     <div className='result-details-wrapper'>
